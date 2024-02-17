@@ -35,14 +35,50 @@ function calculateRectangleArea() {
   const wide = parseFloat(rectangleWideValue);
 
   //Length
-
   const rectangleLengthCalculate = document.getElementById("rectangle-length");
   const rectangleLengthValue = rectangleLengthCalculate.value;
   const length = parseFloat(rectangleLengthValue);
 
   //Area
-
   const area = wide * length;
   const rectangleAreaCalculate = document.getElementById("rectangle-area");
   rectangleAreaCalculate.innerText = area;
+}
+
+//parallelogram
+
+function calculateParallelogramArea() {
+  //base
+  const paraBaseCalculate = document.getElementById("parallelogram-base");
+  const paraBaseValue = paraBaseCalculate.value;
+  const base = parseFloat(paraBaseValue);
+
+  //height
+  const paraHeightCalculate = document.getElementById("parallelogram-height");
+  const paraHeightValue = paraHeightCalculate.value;
+  const height = parseFloat(paraHeightValue);
+
+  //Area
+  const area = base * height;
+  const paraAreaCalculate = document.getElementById("parallelogram-area");
+  paraAreaCalculate.innerText = area;
+}
+
+//Rhombus
+
+function calculateRhombusArea() {
+  //Arm-1
+  const rhombusArm1 = document.getElementById("rhombus-arm1");
+  const rhombusArm1Value = rhombusArm1.value;
+  const arm1 = parseFloat(rhombusArm1Value);
+
+  //Arm-2
+  const rhombusArm2 = document.getElementById("rhombus-arm2");
+  const rhombusArm2Value = rhombusArm2.value;
+  const arm2 = parseFloat(rhombusArm2Value);
+
+  //Area
+  const area = 0.5 * arm1 * arm2;
+  const rhombusArea = document.getElementById("rhombus-area");
+  rhombusArea.innerText = area;
 }
