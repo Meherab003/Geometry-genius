@@ -82,3 +82,41 @@ function calculateRhombusArea() {
   const rhombusArea = document.getElementById("rhombus-area");
   rhombusArea.innerText = area;
 }
+
+//Pentagon
+
+function calculatePentagonArea() {
+  //perimeter
+  const perimeterCalculate = document.getElementById("perimeter");
+  const perimeterValue = perimeterCalculate.value;
+  const perimeter = parseFloat(perimeterValue);
+
+  //apothem
+  const apothemCalculate = document.getElementById("apothem");
+  const apothemValue = apothemCalculate.value;
+  const apothem = parseFloat(apothemValue);
+
+  //area
+  const area = 0.5 * perimeter * apothem;
+  const pentagonAreaCalculate = document.getElementById("pentagon-area");
+  pentagonAreaCalculate.innerText = area;
+}
+
+//Ellipse
+
+function ellipseAreaCalculate() {
+  //A
+  const aCalculate = document.getElementById("ellipse-a");
+  const aValue = aCalculate.value;
+  const a = parseFloat(aValue);
+
+  //B
+  const bCalculate = document.getElementById("ellipse-b");
+  const bValue = bCalculate.value;
+  const b = parseFloat(bValue);
+
+  //Area
+  const area = Math.PI * a * b;
+  const ellipseArea = document.getElementById("ellipse-area");
+  ellipseArea.innerText = area;
+}
