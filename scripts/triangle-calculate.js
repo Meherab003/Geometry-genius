@@ -24,3 +24,25 @@ function calculateTriangleArea() {
   const triangleAreaCalculate = document.getElementById("triangle-area");
   triangleAreaCalculate.innerText = area;
 }
+
+//Rectangle
+
+function calculateRectangleArea() {
+  //Wide
+
+  const rectangleWideCalculate = document.getElementById("rectangle-wide");
+  const rectangleWideValue = rectangleWideCalculate.value;
+  const wide = parseFloat(rectangleWideValue);
+
+  //Length
+
+  const rectangleLengthCalculate = document.getElementById("rectangle-length");
+  const rectangleLengthValue = rectangleLengthCalculate.value;
+  const length = parseFloat(rectangleLengthValue);
+
+  //Area
+
+  const area = wide * length;
+  const rectangleAreaCalculate = document.getElementById("rectangle-area");
+  rectangleAreaCalculate.innerText = area;
+}

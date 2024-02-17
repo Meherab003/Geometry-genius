@@ -11,68 +11,81 @@
 </head>
 
 <body>
-    <main>
+    <main class="mt-5">
         <!-- main Content Container -->
         <div class="flex flex-col md:flex-row">
             <!-- shape Container -->
             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
                 <!-- Triangle Card -->
-                <div class="card card-compact w-96 bg-base-100 shadow-xl mb-4">
-                    <figure><img src="images/triangle.png" alt="Shoes" class="mt-4" /></figure>
+                <div class="card card-compact w-72 bg-base-100 shadow-xl mb-4">
+                    <figure class="max-w-52 h-52 m-auto"><img src="images/triangle.png" alt="Shoes" class="mt-4" />
+                    </figure>
                     <div class="card-body">
-                        <h2 class="mt-6 text-3xl font-bold text-center">Triangle</h2>
+                        <h2 class="mt-2 text-3xl font-bold text-center">Triangle</h2>
                         <p class="text-center text-xl">Area (A) = 0.5 X b X h</p>
                         <div class="">
                             <input id="triangle-base" type="text" placeholder="b"
-                                class="text-xl rounded-md p-2 w-24 bg-[#F1F1F1]">
+                                class="text-xl rounded-md p-2 w-16 bg-[#F1F1F1]">
                             <span class="mr-4 ml-2 text-xl">cm</span>
                             <input id="triangle-height" type="text" placeholder="h"
-                                class="text-xl rounded-md p-2 w-24 bg-[#F1F1F1]">
+                                class="text-xl rounded-md p-2 w-16 bg-[#F1F1F1]">
                             <span class="mr-4 ml-2 text-xl">cm</span>
                         </div>
                         <div>
-                            <p class="text-2xl font-semibold">Area: <span id="triangle-area"></span>
+                            <p class="text-2xl font-semibold text-center w-full rounded-md p-2 bg-[#F1F1F1]">Area: <span
+                                    id="triangle-area"></span>
                                 <span>cm<sup>2</sup></span>
                             </p>
                         </div>
                         <div class="card-actions justify-end">
                             <button onclick="calculateTriangleArea()"
-                                class="btn btn-primary mt-6 w-full text-2xl">Calculate</button>
+                                class="btn btn-primary mt-2 w-full text-2xl">Calculate</button>
                         </div>
                     </div>
                 </div>
 
 
                 <!-- Rectangle  Card -->
-                <div class="card card-compact w-96 bg-base-100 shadow-xl mb-4">
-                    <figure><img src="images/rectangle.png" alt="Shoes" class="mt-4" /></figure>
+                <div class="card card-compact w-72 bg-base-100 shadow-xl mb-4">
+                    <figure class="max-w-52 h-52 m-auto"><img src="images/rectangle.png" alt="Shoes" class="mt-4" />
+                    </figure>
                     <div class="card-body">
-                        <h2 class="mt-6 text-3xl font-bold text-center">Rectangle</h2>
+                        <h2 class="mt-2 text-3xl font-bold text-center">Rectangle</h2>
                         <p class="text-center text-xl">Area (A) = W X L</p>
                         <div class="">
-                            <input type="text" placeholder="w" class="text-xl rounded-md p-2 w-24 bg-[#F1F1F1]">
+                            <input id="rectangle-wide" type="text" placeholder="w"
+                                class="text-xl rounded-md p-2 w-16 bg-[#F1F1F1]">
                             <span class="mr-4 ml-2 text-xl">cm</span>
-                            <input type="text" placeholder="l" class="text-xl rounded-md p-2 w-24 bg-[#F1F1F1]">
+                            <input id="rectangle-length" type="text" placeholder="l"
+                                class="text-xl rounded-md p-2 w-16 bg-[#F1F1F1]">
                             <span class="mr-4 ml-2 text-xl">cm</span>
                         </div>
+                        <div>
+                            <p class="text-2xl font-semibold text-center w-full rounded-md p-2 bg-[#F1F1F1]">Area: <span
+                                    id="rectangle-area"></span>
+                                <span>cm<sup>2</sup></span>
+                            </p>
+                        </div>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary mt-6 w-full text-2xl">Calculate</button>
+                            <button onclick="calculateRectangleArea()"
+                                class="btn btn-primary mt-6 w-full text-2xl">Calculate</button>
                         </div>
                     </div>
                 </div>
 
 
                 <!-- Parallelogram Card -->
-                <div class="card card-compact w-96 bg-base-100 shadow-xl mb-4">
-                    <figure><img src="images/parallelogram.png" alt="Shoes" class="mt-4" /></figure>
+                <div class="card card-compact w-72 bg-base-100 shadow-xl mb-4">
+                    <figure class="max-w-52 h-52 m-auto"><img src="images/parallelogram.png" alt="Shoes" class="mt-4" />
+                    </figure>
                     <div class="card-body">
-                        <h2 class="mt-6 text-3xl font-bold text-center">Parallelogram</h2>
+                        <h2 class="mt-2 text-3xl font-bold text-center">Parallelogram</h2>
                         <p class="text-center text-xl">Area (A) = b X h</p>
                         <div class="">
-                            <input type="text" placeholder="b" class="text-xl rounded-md p-2 w-24 bg-[#F1F1F1]">
+                            <input type="text" placeholder="b" class="text-xl rounded-md p-2 w-16 bg-[#F1F1F1]">
                             <span class="mr-4 ml-2 text-xl">cm</span>
-                            <input type="text" placeholder="h" class="text-xl rounded-md p-2 w-24 bg-[#F1F1F1]">
+                            <input type="text" placeholder="h" class="text-xl rounded-md p-2 w-16 bg-[#F1F1F1]">
                             <span class="mr-4 ml-2 text-xl">cm</span>
                         </div>
                         <div class="card-actions justify-end">
@@ -83,15 +96,16 @@
 
 
                 <!-- Rhombus Card -->
-                <div class="card card-compact w-96 bg-base-100 shadow-xl mb-4">
-                    <figure><img src="images/rhombus.png" alt="Shoes" class="mt-4" /></figure>
+                <div class="card card-compact w-72 bg-base-100 shadow-xl mb-4">
+                    <figure class="max-w-52 h-52 m-auto"><img src="images/rhombus.png" alt="Shoes" class="mt-4" />
+                    </figure>
                     <div class="card-body">
-                        <h2 class="mt-6 text-3xl font-bold text-center">Rhombus</h2>
+                        <h2 class="mt-2 text-3xl font-bold text-center">Rhombus</h2>
                         <p class="text-center text-xl">Area (A) = 0.5 X d1 X d2</p>
                         <div class="">
-                            <input type="text" placeholder="d1" class="text-xl rounded-md p-2 w-24 bg-[#F1F1F1]">
+                            <input type="text" placeholder="d1" class="text-xl rounded-md p-2 w-16 bg-[#F1F1F1]">
                             <span class="mr-4 ml-2 text-xl">cm</span>
-                            <input type="text" placeholder="d2" class="text-xl rounded-md p-2 w-24 bg-[#F1F1F1]">
+                            <input type="text" placeholder="d2" class="text-xl rounded-md p-2 w-16 bg-[#F1F1F1]">
                             <span class="mr-4 ml-2 text-xl">cm</span>
                         </div>
                         <div class="card-actions justify-end">
@@ -102,15 +116,16 @@
 
 
                 <!-- Pentagon Card -->
-                <div class="card card-compact w-96 bg-base-100 shadow-xl mb-4">
-                    <figure><img src="images/pentagon.png" alt="Shoes" class="mt-4" /></figure>
+                <div class="card card-compact w-72 bg-base-100 shadow-xl mb-4">
+                    <figure class="max-w-52 h-52  m-auto"><img src="images/pentagon.png" alt="Shoes" class="mt-4" />
+                    </figure>
                     <div class="card-body">
-                        <h2 class="mt-6 text-3xl font-bold text-center">Pentagon</h2>
+                        <h2 class="mt-2 text-3xl font-bold text-center">Pentagon</h2>
                         <p class="text-center text-xl">Area (A) = 0.5 X p X b</p>
                         <div class="">
-                            <input type="text" placeholder="p" class="text-xl rounded-md p-2 w-24 bg-[#F1F1F1]">
+                            <input type="text" placeholder="p" class="text-xl rounded-md p-2 w-16 bg-[#F1F1F1]">
                             <span class="mr-4 ml-2 text-xl">cm</span>
-                            <input type="text" placeholder="b" class="text-xl rounded-md p-2 w-24 bg-[#F1F1F1]">
+                            <input type="text" placeholder="b" class="text-xl rounded-md p-2 w-16 bg-[#F1F1F1]">
                             <span class="mr-4 ml-2 text-xl">cm</span>
                         </div>
                         <div class="card-actions justify-end">
@@ -121,15 +136,16 @@
 
 
                 <!-- Ellipse Card -->
-                <div class="card card-compact w-96 bg-base-100 shadow-xl mb-4">
-                    <figure><img src="images/ellipse.png" alt="Shoes" class="mt-4" /></figure>
+                <div class="card card-compact w-72 bg-base-100 shadow-xl mb-4">
+                    <figure class="max-w-52 h-52 m-auto"><img src="images/ellipse.png" alt="Shoes" class="mt-4" />
+                    </figure>
                     <div class="card-body">
-                        <h2 class="mt-6 text-3xl font-bold text-center">Ellipse</h2>
+                        <h2 class="mt-2 text-3xl font-bold text-center">Ellipse</h2>
                         <p class="text-center text-xl">Area (A) = Pi X a X b</p>
                         <div class="">
-                            <input type="text" placeholder="a" class="text-xl rounded-md p-2 w-24 bg-[#F1F1F1]">
+                            <input type="text" placeholder="a" class="text-xl rounded-md p-2 w-16 bg-[#F1F1F1]">
                             <span class="mr-4 ml-2 text-xl">cm</span>
-                            <input type="text" placeholder="b" class="text-xl rounded-md p-2 w-24 bg-[#F1F1F1]">
+                            <input type="text" placeholder="b" class="text-xl rounded-md p-2 w-16 bg-[#F1F1F1]">
                             <span class="mr-4 ml-2 text-xl">cm</span>
                         </div>
                         <div class="card-actions justify-end">
@@ -141,7 +157,7 @@
 
 
             <!-- area calculation Container -->
-            <div class="w-96 border-2 border-[#1111111A] rounded-md">
+            <div class="w-96 border-2 border-[#1111111A] rounded-md p-4">
                 <h3 class="text-3xl font-bold text-center">Area Calculation</h3>
             </div>
         </div>
